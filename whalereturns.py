@@ -144,7 +144,8 @@ rolling_beta.plot(figsize=(15, 10),
                   title='Rolling 60-Day Beta of SOROS FUND MANAGEMENT LLC')
 
 # Use `ewm` to calculate the rolling window
-
+combined_df.ewm(halflife=21).std().plot(
+    title="21 Day Rolling Standard Deviation for All Portfolios")
 
 # Annualized Sharpe Ratios
 sharpe_ratios = []
